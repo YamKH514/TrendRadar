@@ -25,7 +25,7 @@ crawler:
 
 # 推送模式选择
 report:
-  mode: "daily" # 可选: "daily"|"incremental"|"current"
+  mode: "current" # 可选: "daily"|"incremental"|"current"
   rank_threshold: 5 # 排名高亮阈值
 
 notification:
@@ -49,7 +49,7 @@ notification:
       start: "08:00"  # 推送时间窗口开始（北京时间）
       end: "23:00"    # 推送时间窗口结束（北京时间）
     once_per_day: false  # 每天在时间窗口内只推送一次，如果 false，则窗口内每次执行都推送
-    push_record_retention_days: 7  # 推送记录保留天数
+    push_record_retention_days: 3  # 推送记录保留天数
 
   # 请务必妥善保管好 webhooks，不要公开
   # 如果你以 fork 的方式将本项目部署在 GitHub 上，请勿在此填写任何 webhooks，而是将 webhooks 填入 GitHub Secret
@@ -86,18 +86,12 @@ platforms:
     name: "卫星通讯社"
   - id: "zaobao"
     name: "联合早报"
-  - id: "mktnews"
-    name: "MKT新闻"
-  - id: "kaopu"
-    name: "靠谱新闻"
 
   # === 财经投资类 ===
   - id: "wallstreetcn-hot"
     name: "华尔街见闻 最热"
   - id: "wallstreetcn-quick"
     name: "华尔街见闻 快讯"
-  - id: "wallstreetcn-news"
-    name: "华尔街见闻 最新"
   - id: "cls-hot"
     name: "财联社热门"
   - id: "gelonghui"
@@ -124,7 +118,3 @@ platforms:
     name: "V2EX"
   - id: "pcbeta"
     name: "远景论坛"
-  - id: "sspai"
-    name: "少数派"
-  - id: "producthunt"
-    name: "ProductHunt"
